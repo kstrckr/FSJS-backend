@@ -1,0 +1,17 @@
+{
+  "name": "personal-api-practice",
+  "version": "1.0.0",
+  "description": "practice building API w/ express and mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kurt Strecker",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.8",
+    "pug": "^2.0.0-rc.2"
+  }
+}
