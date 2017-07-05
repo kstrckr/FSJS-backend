@@ -5,8 +5,6 @@ const allCodes = require('./unicodes');
 var Schema = mongoose.Schema;
 
 const MatchGameSchema = new Schema({
-    level: {type: Number, default: 1},
-    dimensions: {type: Number, default: 4},
     createdAt: {type: Date, default: Date.now},
     gameTiles: {type: [], default: []}
 })
@@ -16,7 +14,7 @@ MatchGameSchema.methods.generateBoard = function(length){
     let newBoard = [];
     let totalTiles = length/2
     let possibleTiles = allCodes.codes;
-    for(let i = 0; i <= totalTiles; i++) {
+    for(let i = 0; i < totalTiles; i++) {
         let randomNumb = Math.floor(Math.random() * possibleTiles.length)+1;
         let newTile = `&#${possibleTiles[randomNumb]}`;
         newBoard.push(newTile);
