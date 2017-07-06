@@ -6,6 +6,7 @@ var Schema = mongoose.Schema;
 
 const MatchGameSchema = new Schema({
     createdAt: {type: Date, default: Date.now},
+    length: Number,
     gameTiles: {type: [], default: []}
 })
 
@@ -15,7 +16,7 @@ MatchGameSchema.methods.generateBoard = function(length){
     let totalTiles = length/2
     let possibleTiles = allCodes.codes;
     for(let i = 0; i < totalTiles; i++) {
-        let randomNumb = Math.floor(Math.random() * possibleTiles.length)+1;
+        let randomNumb = Math.floor(Math.random() * possibleTiles.length)-1;
         let newTile = `&#${possibleTiles[randomNumb]}`;
         newBoard.push(newTile);
     }
@@ -24,7 +25,8 @@ MatchGameSchema.methods.generateBoard = function(length){
     output.sort((a, b) => {return 0.5 - Math.random()});
     console.log(output.length);
 
-    return this.gameTiles = output;
+    this.length = length
+    this.gameTiles = output;
 }
 
 const NewLevel = mongoose.model('NewLevel', MatchGameSchema);
