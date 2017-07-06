@@ -17,11 +17,15 @@ router.get("/method", function(req, res, next){
     boardIngredients.length = level1.length;
     boardIngredients.id = level1._id;
     res.send(boardIngredients);
-    /*
+    
     level1.save(function(err, level1){
         if(err) return console.error(err);
     })
-    */
+    
+})
+
+router.get("/check/:id/:A/:B?", function(req, res, next){
+    
 })
 
 
