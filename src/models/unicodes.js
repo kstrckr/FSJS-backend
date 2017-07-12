@@ -316,10 +316,6 @@ const codes = [
 	1117,
 	1118,
 	1119,
-	8592,
-	8593,
-	8594,
-	8595
 	]
 
 module.exports.codes = codes;
