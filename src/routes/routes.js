@@ -14,6 +14,7 @@ router.get("/", function(req, res, next){
 router.get("/method", function(req, res, next){
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    const level1 = new NewLevel();
     level1.generateBoard(12);
     let boardIngredients = {};
     boardIngredients.length = level1.length;

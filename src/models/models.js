@@ -31,7 +31,7 @@ MatchGameSchema.methods.generateBoard = function(length){
 
 const NewLevel = mongoose.model('NewLevel', MatchGameSchema);
 
-const level1 = new NewLevel();
 
-module.exports.level1 = level1;
+
+//module.exports.level1 = level1;
 module.exports.NewLevel = NewLevel;
